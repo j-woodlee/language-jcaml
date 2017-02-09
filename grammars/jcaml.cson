@@ -1,0 +1,39 @@
+'scopeName': 'source.jcaml'
+'name': 'JCaml'
+'fileTypes': ['jml']
+
+'patterns': [
+    {
+        'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+        'name': 'constant.numeric.jcaml'
+    },
+    {
+        'match': '\\b(function)\\s+(\\w+)\\s*\\(.*\\)'
+        'captures':
+            '1':
+                'name': 'keyword.control.mylanguage'
+            '2':
+                'name': 'entity.name.function.mylanguage'
+        'name': 'meta.function.jcaml'
+    },
+        'begin': '\''
+        'beginCaptures':
+            '0':
+                'name': 'punctuation.definition.string.begin.mylanguage'
+        'end': '\''
+        'endCaptures':
+            '0':
+                'name': 'punctuation.definition.string.end.mylanguage'
+        'name': 'string.quoted.single.mylanguage'
+    {
+        'begin': '\"'
+        'beginCaptures':
+            '0':
+                'name': 'punctuation.definition.string.begin.mylanguage'
+        'end': '\"'
+        'endCaptures':
+            '0':
+                'name': 'punctuation.definition.string.end.mylanguage'
+        'name': 'string.quoted.double.mylanguage'
+    }
+]
